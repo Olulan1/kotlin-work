@@ -10,12 +10,13 @@ fun main(args: Array<String>) {
 		println("Error: filename required as sole argument")
 	        exitProcess(1)
        } else if (args.size == 2) {
-       		x = arg1
-       		y = arg2
+       		x = args[0]
+       		y = args[1]
        		println(x)
        		println(y)
-	} else if (args[0]) {
-		exitProcess(1)
+	} else if (args.size == 1) {
+		x = args[0]
+		println(y)
 	}
     // required argument available here, as args[0]
     // Why's there a time limit?
