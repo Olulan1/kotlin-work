@@ -9,5 +9,14 @@ import com.github.ajalt.mordant.table.table
 import com.github.ajalt.mordant.terminal.Terminal
 
 fun main(args: Array<String>) {
-    // Add your code here
+    if (args.size == 3) {
+        println("You have 4 args")
+    } else if (args.size == 2) {
+    	println("You have 3 args")
+    } else if (args.size == 1) {
+    	println ("You have 2 args")
+    } else {
+    	println("You have 0 args.")
+    }
+
 }
