@@ -7,7 +7,7 @@ fun main(args: Array<String>) {
 	val arr = arrayOf(0)
 	try {
     		val parsedInt = args[0].toInt()
-       /*println("The parsed int is $parsedInt")*/
+       		/*println("The parsed int is $parsedInt")*/
 		arr[0] = parsedInt
 	} catch (nfe: NumberFormatException) {
 		println("Cannot be made to int.")
