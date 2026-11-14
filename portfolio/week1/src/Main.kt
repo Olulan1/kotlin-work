@@ -30,9 +30,9 @@ fun main(args: Array<String>) {
     		area*=semiperimeter
     		area = sqrt(area)
     		if (area < 0) {area = area * -1}
-    		var look = String.format("Area: %.5f",area)
+    		var look = String.format("%.5f",area)
     		look = look.trim()
-    		println(look)
+    		println("Area: $look")
     	}
 
     } else {
