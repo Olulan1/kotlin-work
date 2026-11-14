@@ -3,3 +3,40 @@
 
 import kotlin.math.sqrt
 import kotlin.system.exitProcess
+// import kotlin.math.abs
+
+fun main(args: Array<String>) {
+
+    if (args.size == 3) {
+    	println(args[0])
+    	val arr = arrayOf(0.0,0.0,0.0)
+    	var threeDoubles = true
+    	for (i in 0..2) {
+    		try {
+            		val parsedDouble = args[i].toDouble()
+	        /*println("The parsed double is $parsedDouble")*/
+		        arr[i] = parsedDouble
+       		} catch (nfe: NumberFormatException) {
+       			println("Cannot be made to double.")
+       			threeDoubles = false
+       		 }	
+    	}
+    	if (threeDoubles == true) {
+    		var semiperimeter = 0.5; var area = 1.0
+    		for (i in 0..2) {
+    			arr[i]=semiperimeter-arr[i]
+    			area = area*arr[i]
+    		}
+    		area*=semiperimeter
+    		if (area < 0) {area = area * -1}
+    		val look = String.format("Area: %.5f",area)
+    		println(look)
+    	}
+
+    } else {
+    	println("Error: values for a, b, c required on command line")
+        exitProcess(1)
+    }
+
+
+}
