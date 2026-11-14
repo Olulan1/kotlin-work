@@ -32,7 +32,7 @@ fun main(args: Array<String>) {
     		if (area < 0) {area = area * -1}
     		var look = String.format("Area: %.5f",area)
     		look = look.trim()
-    		print(look)
+    		println(look)
     	}
 
     } else {
