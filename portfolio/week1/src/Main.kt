@@ -8,7 +8,6 @@ import kotlin.system.exitProcess
 fun main(args: Array<String>) {
 
     if (args.size == 3) {
-    	println(args[0])
     	val arr = arrayOf(0.0,0.0,0.0)
     	var threeDoubles = true
     	for (i in 0..2) {
@@ -23,14 +22,16 @@ fun main(args: Array<String>) {
     	}
     	if (threeDoubles == true) {
     		var semiperimeter = 0.5; var area = 1.0
+    		semiperimeter = semiperimeter*(arr[0]+arr[1]+arr[2])
     		for (i in 0..2) {
     			arr[i]=semiperimeter-arr[i]
     			area = area*arr[i]
     		}
     		area*=semiperimeter
+    		area = sqrt(area)
     		if (area < 0) {area = area * -1}
     		val look = String.format("Area: %.5f",area)
-    		println(look)
+    		print(look)
     	}
 
     } else {
