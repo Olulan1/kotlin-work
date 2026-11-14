@@ -3,7 +3,7 @@
 
 import kotlin.math.sqrt
 import kotlin.system.exitProcess
-// import kotlin.math.abs
+import kotlin.String
 
 fun main(args: Array<String>) {
 
@@ -30,7 +30,8 @@ fun main(args: Array<String>) {
     		area*=semiperimeter
     		area = sqrt(area)
     		if (area < 0) {area = area * -1}
-    		val look = String.format("Area: %.5f",area)
+    		var look = String.format("Area: %.5f",area)
+    		look = look.trim()
     		print(look)
     	}
 
