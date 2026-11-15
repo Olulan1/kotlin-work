@@ -36,6 +36,9 @@ fun main(args: Array<String>) {
 		it.write("EOF")	
 		
 	}
+	/*filePath.forEachLine {
+	    println(it)
+	}*/
 	
 	
 	
