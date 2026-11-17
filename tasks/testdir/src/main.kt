@@ -36,6 +36,27 @@ fun main() {
     println(circleArea(4.0))
 }
 
+fun greet(target: String = "World") {
+    println("Hello $target!")
+}
+
+/*
+greet()        // prints Hello World!
+greet("Joe")   // prints Hello Joe!
+*/
+
+fun processCsvFile(filename: String, skip: Int = 0, separator: Char = ',') {
+    ...
+}
+
+/*
+processCsvFile("data.csv")
+processCsvFile("data.csv", skip=10)
+processCsvFile("data.csv", separator='|')
+processCsvFile("data.csv", skip=5, separator=':')
+*/
+
+
 /*
 New template
 import kotlin.random.Random
