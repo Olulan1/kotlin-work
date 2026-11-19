@@ -1,27 +1,32 @@
-// Task 5.1.1: main program
+// Task 5.3.1: main program
 import kotlin.random.Random
 import kotlin.system.exitProcess
-
 fun main(args: Array<String>) {
-	if (args.size == 2) {
-		// println(args[0])
-    		val arr = arrayOf("","")
-    		var twoWords = true
-		try {
-			for (i in 0..1) {
-		    		var parsedString = args[i]
-		       		/*println("The parsed double is $parsedDouble")*/
-				arr[i] = parsedString
-		        }
-       		} catch (nfe: NumberFormatException) {
-       			println("Cannot be made to double.")
-       			twoWords = false
-       		 }
-       		 if (twoWords == true) {
-       		 	var x = anagrams(arr[0],arr[1])
-       		 	println("Anagrams: $x")
-       		}
-	} else {
+	val iteration = args.size
+	val index = iteration-1
+	
+	if (iteration > 0) {
+		val arr = arrayOf(0)
+    		var xVals = true
+		for (i in 0..index) {
+			println("Index: $i")
+			var parsedVal = 0
+			try {
+				parsedVal = args[i].toInt()
+				arr[0] = parsedVal
+			} catch (nfe: NumberFormatException) {
+				xVals = false
+			}
+			if (xVals == true) {
+				rollDie(parsedVal)
+			} else {
+				rollDie(0)
+			}
+			xVals = true
+		}
+	}
+	else {
+		println("No Integer entered! Integer required on command line!")
 		exitProcess(1)
 	}
 }

@@ -65,15 +65,19 @@ fun main(args: Array<String>) {
 	val iteration = args.size
 	
 	if (iteration > 0) {
+		val arr = arrayOf("","")
+    		var xVals = true
 		for (i in 0..iteration) {
+			var parsedVal = ""
 			try {
+				val ParsedVal = ""
 			} catch (nfe: NumberFormatException) {
 			
 			}
 		}
 	}
 	else {
-		println("No grades entered! Integers required on command line!")
+		println("No [] entered! [] required on command line!")
 		exitProcess(1)
 	}
 }
